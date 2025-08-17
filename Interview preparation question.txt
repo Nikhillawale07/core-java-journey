@@ -1,0 +1,143 @@
+1. class loader - JRE and JDK
+2. Garbage collection and Metaspace 
+3. WeakReference, SoftReference, PhantomReference
+4. HashMap vs WeakHashMap vs ConcurrentHashMap
+5. String - Immuntable (String constant pool)
+6. StringBuffer vs StringBuilder
+7. Array vs Collection
+8. ArrayList vs LinkedList
+9. How to make list thread-safe
+ - Collections.SynchronizedList(list);
+ - CopyOnWriteArrayList(); //this is also thread-safe but it uses copy on write algorithm
+10. Using collections two program using stream() api
+11. Internal working of hashcode()
+12. Serialization, deserialization, boxing and unboxing
+13. Comparator vs Comparable
+14. Fail-fast vs fail-safe
+15. Multithreading in java
+ - Thread class
+ - Runnable interface
+ inter-thread communication
+ wait(),notify(), notifyAll() methods
+ 
+ sleep,join methods
+ 16.User thread vs Daemon thread
+17.Runnable vs Callable interfaces
+18. Synchronization vs Concurrency
+19. Thread pool
+20. Executor framework
+ - ExecutorService
+21. Design patterns
+ - Creational pattern
+ - Structural pattern
+ - Behavioral pattern
+22. java 8 features
+ - Stream api 
+ - functional interfaces
+ - lambda expressions
+ - Method references
+ - static and default method in interfaces
+ - Date and time api
+ - Optional class
+23. Object oriented principles
+ - Abstraction
+ - Encapsulation
+ - Polymorphism
+24. Exception handling - Custom exception creation
+25. Inheritance, abstract class and interfaces 
+26. super, this, transient and volatile keywords
+27. File handling (I/O)
+----------------------------------------------------------------------------------------------------------
+
+Here’s a sneak peek into my recent interview and the questions that challenged me!
+
+TCS Java Backend Developer L1 Level Interview (3-5 years)
+
+Duration: 30-45 min
+
+-Give a brief introduction about yourself and your project.
+-What is an Interface in Java?
+-Difference between abstract class and interface.
+-What is an exception in Java and how can we handle it? What is a Checked Exception?
+-How to create an Immutable class in Java?
+-What is a Functional Interface in Java 8?
+-What is a method reference in Java 8?
+-How is memory allocation done in Java 8?
+-Define the Optional class in Java 8.
+-Difference between StringBuffer and StringBuilder. Which one is efficient?
+-Internal working of HashMap in Java.
+-What are Lambda Expressions in Java?
+-Default methods in Java 8. Can we override static methods?
+-What are streams in Java?
+-Write a program to find the second highest salary from an ArrayList using Java 8 Streams. How many streams are created in the existing program?
+-What is Mockito in JUnit?
+-What is the @SpringBootApplication annotation used for?
+-What is the @Transactional annotation in Spring Boot?
+-Difference between RestController and Controller.
+-What is the difference between POST and PUT methods?
+-Explain the whole architecture of how REST API works.
+-How can we achieve Spring Security?
+-What is a JWT Token?
+-What are microservices?
+-What is an API Gateway?
+-What is the circuit breaker design pattern in microservices?
+-What is the SAGA design pattern in microservices?
+-What is Docker and how does a Docker image work?
+-What is a CI/CD Pipeline?
+-Find the second highest salary of an employee using optimized SQL queries.
+
+----------------------------------------------------------------------------------
+. Sum of Elements
+Write a program to take an array of integers as input and calculate the sum of all elements in the array.
+2. Find Maximum and Minimum
+Write a program to find the maximum and minimum values in an array of integers.
+3. Reverse an Array
+Write a program to reverse the elements of an array without using an additional array.
+ 4. Count Even and Odd Numbers
+Write a program to count the number of even and odd numbers in an array of integers.
+ 5. Search an Element
+Write a program to search for an element in an array and return its index. If the element is not found, display a message.
+ 6. Frequency of Elements
+Write a program to count the frequency of each element in an array. Example:
+Input: [1, 2, 2, 3, 4, 4, 4]
+Output: 1: 1, 2: 2, 3: 1, 4: 3
+7. Second Largest Element
+Write a program to find the second largest element in an array.
+8. Rotate an Array
+Write a program to rotate an array to the right by a given number of steps. Example:
+Input: [1, 2, 3, 4, 5], Rotate by 2
+Output: [4, 5, 1, 2, 3]
+9. Check Palindrome Array
+Write a program to check if an array is a palindrome. Example:
+Input: [1, 2, 3, 2, 1]
+Output: true
+10. Merge Two Arrays
+Write a program to merge two arrays into a single array. 
+
+🚀 Java & OOPs Concepts🚀
+🔹 What is a constructor? Can we override a constructor?
+🔹 Where is a constructor used in your framework?
+🔹 What is abstraction?
+🔹 How to achieve multiple abstraction in Java?
+🔹 What is an interface?
+🔹 What is encapsulation? Where have you used it in your project?
+🔹 What is polymorphism? Where have you applied it in your framework?
+🔹 What is method overloading and method overriding? Explain both and where you used them in your framework?
+🔹 Have you used collections in your framework?
+🔹 What is the static keyword in Java?
+🔹 What is memory management in Java?
+🔹 What is garbage collection in Java?
+🔹 Difference between constructor overloading and method overloading?
+🔹 What is exception?
+🔹 List some exceptions you faced during automation and how you handled them.
+
+🚀 Selenium & Web Automation🚀
+
+🔹 How do you handle dynamic web elements?
+🔹 Write the syntax of the Select class and explain its methods.
+🔹 How do you handle iFrames?
+🔹 How do you determine whether an element is an iFrame or not?
+🔹 How do you handle mouse actions in Selenium?
+🔹 How do you handle keyboard actions in Selenium?
+🔹 How do you press the ENTER key using the Actions class? Write the syntax.
+🔹 How do you use the SHIFT key to type uppercase letters in Selenium? Write the syntax.

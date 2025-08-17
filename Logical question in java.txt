@@ -1,0 +1,933 @@
+class Main
+{
+   public static void main(String args[])
+   {
+   	int n=121;
+        int temp=n,sum=0;
+        while(temp!=0)
+        {
+	    sum*=10;
+	    sum+=temp%10;
+            temp/=10;
+        } 
+        if(sum==n)
+	{
+		System.out.println(n+":is a palindrome");
+	}
+        else
+        {
+	     System.out.println(n+":is not palindrome");  
+	}
+   }
+	 
+}
+
+-------------------------------------------------------------------------
+public class Factorial {
+
+    public static long factorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        int number = 5;
+        System.out.println("Factorial of " + number + " is: " + factorial(number));
+    }
+}
+
+----------------------------------------------------------------------------------------------------
+import java.util.Arrays;
+
+public class AnagramCheck {
+    public static boolean areAnagrams(String s1, String s2) {
+        char[] a1 = s1.toCharArray();
+        char[] a2 = s2.toCharArray();
+        Arrays.sort(a1);
+        Arrays.sort(a2);
+        return Arrays.equals(a1, a2);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(areAnagrams("listen", "silent")); // true
+    }
+}
+
+----------------------------------------------------------------------
+public class RemoveDuplicates {
+    public static void main(String[] args) {
+        String str = "programming";
+        String result = "";
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (result.indexOf(ch) == -1) {
+                result += ch;
+            }
+        }
+
+        System.out.println("Original: " + str);
+        System.out.println("Without duplicates: " + result);
+    }
+}
+
+-------------------------------------------------------------------------
+public class MissingNumber {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 4, 5}; // Missing number is 3
+        int n = 5; // Total numbers from 1 to 5
+
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+
+        int total = n * (n + 1) / 2;
+        int missing = total - sum;
+
+        System.out.println("Missing number is: " + missing);
+    }
+}
+
+---------------------------------------------
+import java.util.HashMap;
+
+public class Main {
+    public static void main(String[] args) {
+        String s = "hello";
+
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        // Count frequency
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+
+            if (map.containsKey(ch)) {
+                map.put(ch, map.get(ch) + 1);
+            } else {
+                map.put(ch, 1);
+            }
+        }
+
+        // Print result
+        for (char ch : map.keySet()) {
+            System.out.println(ch + " = " + map.get(ch));
+        }
+    }
+}
+
+
+
+
+h = 1  
+e = 1  
+l = 2  
+o = 1  
+
+-----------------------------------------------------
+import java.util.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        String s1="hello";
+
+        HashMap<Character,Integer> map = new HashMap<>();   
+        for(int i=0;i<s1.length();i++)
+        {
+           char ch = s1.charAt(i);
+        
+            map.put(ch,map.getOrDefault(ch,0)+1);
+        }
+
+        for(char ch :  map.keySet())
+        {
+            System.out.print(ch + ":" + map.get(ch) + " ");
+        }
+    }
+}
+
+ h:1 e:1 l:2 o:1
+
+-----------------------------------------------------------------------------------------------------
+import java.util.Arrays;
+class Main 
+{
+    public static void main(String args[])
+    {
+        int a[] = new int[]{1,2,3,4,5,1,2,2};
+        Arrays.sort(a);
+        for(int i=0;i<a.length-1;i++)
+        {
+            if(a[i]==a[i+1])
+            {
+                System.out.print(a[i] + " ");
+            }
+            while(i<a.length-1 && a[i]==a[i+1])
+            {
+                i++;
+            }
+        }
+        
+    }
+}
+
+-------------------------------------------------
+class Main 
+{
+    public static void main(String args[])
+    {
+        int[] a = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        int maxSum=a[0];
+        int currentSum=a[0];
+        for(int i=1;i<a.length;i++)
+        {
+            currentSum=Math.max(a[i], currentSum+a[i]);
+            maxSum=Math.max(maxSum,currentSum);
+
+        }
+        System.out.println(maxSum);
+    }
+}
+
+-------------------------------------------------------------
+    *
+   ***
+  *****
+ *******
+*********
+
+class Main 
+{
+    public static void main(String args[])
+    {
+        int n=5;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=i;j<n;j++)
+            {
+                System.out.print(" ");
+
+            }
+            for(int j=1;j<=(i*2)-1;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+-----------------------------------------------------------------------
+  1
+ *2*
+**3**
+
+class Main 
+{
+    public static void main(String args[])
+    {
+        int n=3;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=i;j<n;j++)
+            {
+                System.out.print(" ");
+
+            }
+            for(int j=1;j<=(i*2)-1;j++)
+            {
+                if(i==j)
+                {
+                    System.out.print(i);
+                }
+                else
+                {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+----------------------------------------------------------------
+class Main 
+{
+    public static void main(String args[])
+    {
+        int a[] = {111,152,13,145,15,116,157};
+        int max=a[0];
+        int secondMax=0;
+        for(int i=1;i<a.length;i++)
+        {
+            if(max<a[i])
+            {
+                secondMax=max;
+                max=a[i];
+            }
+            else if(secondMax<a[i] && a[i]!=max)
+            {
+                secondMax=a[i];
+            }
+        }
+        System.out.println("max"+max);
+        System.out.println("secondMax"+secondMax);
+        
+    }
+}
+//max157
+secondMax152
+
+--------------------------------------------------------------
+//calculate the missing numbers in the array 
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        int[] a = {1, 3, 5, 6}; // Missing: 2 and 4
+        int n = 6; // Total numbers expected from 1 to n
+
+        // Step 1: Use HashSet for fast lookup
+        Set<Integer> set = new HashSet<>();
+        for (int num : a) {
+            set.add(num);
+        }
+
+        // Step 2: Find missing numbers
+        System.out.print("Missing numbers: ");
+        for (int i = 1; i <= n; i++) {
+            if (!set.contains(i)) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
+------------------------------------------------------------------------
+remove duplicate
+import java.util.HashSet;
+
+class Main {
+    public static void main(String[] args) {
+        int[] a = {1, 2, 3, 2, 4, 5, 3};
+
+        HashSet<Integer> set = new HashSet<>();
+
+        System.out.print("Duplicate elements: ");
+        for (int num : a) {
+            if (set.contains(num)) {
+                System.out.print(num + " ");
+            } else {
+                set.add(num);
+            }
+        }
+    }
+}
+
+-------------------------------------------------------
+import java.util.LinkedHashMap;
+class Main 
+{
+    public static void main(String args[])
+    {
+        String s1="hello";
+        LinkedHashMap<Character,Integer> map = new LinkedHashMap<>();
+        for(int i=0;i<s1.length();i++)
+        {
+            char ch = s1.charAt(i);
+            if(map.containsKey(ch))
+            {
+                map.put(ch,map.get(ch)+1);
+                
+            }
+            else
+            {
+                map.put(ch,1);
+            }
+
+
+        }
+        for(char ch : map.keySet())
+        {
+            System.out.print(ch + ":" + map.get(ch) + " ");
+        }
+
+    }
+
+}
+
+----------------------------------------------------------------
+move all zero at last
+class Main {
+    public static void main(String args[]) {
+        int[] a = {0, 1, 0, 3, 12};
+        int j = 0;
+
+        // Swap non-zero elements forward
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] != 0) {
+                int temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+                j++;
+            }
+        }
+
+        // Print the array
+        for (int num : a) {
+            System.out.print(num + " ");
+        }
+    }
+}
+--------------------------------------------------------------------------
+  *
+ ***
+*****
+
+class Main 
+{
+    public static void main(String args[])
+    {
+      int n=3;
+      for(int i=1;i<=n;i++)
+      {
+        for(int j=i;j<n;j++)
+        {
+            System.out.print(" ");
+
+        }
+        for(int j=1;j<=(i*2)-1;j++)
+        {
+            System.out.print("*");
+        }
+        System.out.println();
+      }
+
+    }
+}
+----------------------------------------------------------------
+    *
+   ***
+  *****
+ *******
+*********
+
+class Main 
+{
+    public static void main(String args[])
+    {
+      int n=5;
+      for(int i=1;i<=n;i++)
+      {
+        for(int j=i;j<n;j++)
+        {
+            System.out.print(" ");
+
+        }
+        for(int j=1;j<=(i*2)-1;j++)
+        {
+            System.out.print("*");
+        }
+        System.out.println();
+      }
+
+    }
+}
+//pyramid pattern
+
+-------------------------------------------------
+pascal
+
+     1 
+    1 1 
+   1 2 1 
+  1 3 3 1 
+ 1 4 6 4 1 
+
+class Main {
+    public static void main(String args[]) {
+        int n = 5;
+        for (int i = 0; i < n; i++) {
+            // Print spaces
+            for (int j = 0; j < n - i; j++) {
+                System.out.print(" ");
+            }
+
+            int num = 1;
+            // Print numbers in the row
+            for (int j = 0; j <= i; j++) {
+                System.out.print(num + " ");
+                num = num * (i - j) / (j + 1);
+            }
+            System.out.println();
+        }
+    }
+}
+
+------------------------------------------
+    *
+   ***
+  *****
+ *******
+*********
+*********
+ *******
+  *****
+   ***
+    *
+
+class Main 
+{
+    public static void main(String args[])
+    {
+      int n=5;
+      for(int i=1;i<=n;i++)
+      {
+        for(int j=i;j<n;j++)
+        {
+            System.out.print(" ");
+
+        }
+        for(int j=1;j<=(i*2)-1;j++)
+        {
+            System.out.print("*");
+        }
+        System.out.println();
+      }
+      for(int i=n;i>=1;i--)
+      {
+        for(int j=i;j<n;j++)
+        {
+            System.out.print(" ");
+
+        }
+        for(int j=1;j<=(i*2)-1;j++)
+        {
+            System.out.print("*");
+        }
+        System.out.println();
+      }
+
+    }
+}
+
+-----------------------------------------------------------
+import java.util.*;
+
+class Main 
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter first string:");
+        String s1=sc.nextLine();
+
+        System.out.println("Enter second string:");
+        String s2=sc.nextLine();
+
+        char ch[] =s1.toCharArray();
+        char ch1[]=s2.toCharArray();
+        Arrays.sort(ch);
+        Arrays.sort(ch1);
+
+        if(Arrays.equals(ch,ch1))
+        {
+            System.out.println("anagram");  
+
+        }
+        else
+        {
+            System.out.println("not anagram");
+        }
+
+
+    }
+
+}
+
+//silent
+//listen
+
+---------------------------------------
+import java.util.*;
+
+class Main 
+{
+    public static void main(String args[])
+    {
+       String s1="madam";
+       StringBuilder sb = new StringBuilder(s1).reverse();
+       if(s1.equals(sb.toString()))
+       {
+        System.out.println("palindrome");
+       }
+       else
+
+       {
+        System.out.println("not palindrome");
+        
+       }
+    }
+
+}
+----------------------------------------------------
+import java.util.*;
+
+class Main 
+{
+    public static void main(String args[])
+    {
+       String s1="madam";
+       StringBuilder sb = new StringBuilder();
+       for(int i=s1.length()-1;i>=0;i--)
+       {
+        sb.append(s1.charAt(i));
+       }
+       if(s1.equals(sb.toString()))
+       {
+        System.out.println("palindome");
+       }
+       else
+       {
+        System.out.println("not palindrome");
+       }
+
+}
+
+}
+
+----------------------------------------
+import java.util.*;
+
+class Main 
+{
+    public static void main(String args[])
+    {
+        String s1="programming";
+        StringBuilder sb = new StringBuilder();
+        LinkedHashSet set = new LinkedHashSet<>();
+        for(char c : s1.toCharArray())
+        {
+            if(set.add(c))
+            {
+                sb.append(c);
+            }
+        }
+        System.out.println(sb);
+
+    }
+
+}
+
+-------------------------------------------
+import java.util.*;
+
+class Main 
+{
+    public static void main(String args[])
+    {
+        String s1="programming";
+        HashMap<Character,Integer> map = new HashMap<>(); 
+        for(char ch :s1.toCharArray())
+        {
+            if(map.containsKey(ch))
+            {
+                map.put(ch,map.get(ch)+1);
+                
+            }
+            else
+            {
+                map.put(ch,1);
+            }
+        }
+        for(char ch : map.keySet())
+        {
+            if(map.get(ch)>1)
+            {
+                System.out.print(ch + " ");
+            }
+        }
+
+    }
+
+}
+
+---------------------------------------------------
+// input:String s1="Java is fun";
+//output: fun is Java 
+
+	
+import java.util.*;
+
+class Main 
+{
+    public static void main(String args[])
+    {
+        String s1="Java is fun";
+        String s2[] =s1.split(" ");
+        StringBuilder sb = new StringBuilder();
+        for(int i=s2.length-1;i>=0;i--)
+        {
+            sb.append(s2[i]);
+            if(i<s2.length)
+            {
+                sb.append(" ");
+            }
+        }
+        System.out.println(sb);
+
+        
+
+    }
+
+}
+
+----------------------
+//input:String s1="Java is fun";
+//output:nuf si avaJ
+
+import java.util.*;
+
+class Main 
+{
+    public static void main(String args[])
+    {
+        String s1="Java is fun";
+        String s2[] =s1.split(" ");
+        StringBuilder sb = new StringBuilder();
+        for(int i=s1.length()-1;i>=0;i--)
+        {
+            sb.append(s1.charAt(i));
+            
+        }
+        System.out.println(sb);
+
+        
+
+    }
+
+}
+-----------------------------------------------
+//avaJ si nuf 
+import java.util.*;
+
+class Main 
+{
+    public static void main(String args[])
+    {
+        String s1="Java is fun";
+        String s2[] = s1.split(" ");
+        StringBuilder sb = new StringBuilder();
+        for(int i=0;i<s2.length;i++)
+        {
+           StringBuilder temp = new StringBuilder(s2[i]);
+           sb.append(temp.reverse().append(" "));
+        }
+        System.out.println(sb);
+
+    }
+
+}
+----------------------------------------------
+Input: "hello world"
+Output: Vowels = 3, Consonants = 7
+import java.util.*;
+
+class Main 
+{
+    public static void main(String args[])
+
+    {
+        String s1="hello world";
+        String s2="AEIOUaeiou";
+        int vowCount=0,conCount=0; 
+        for(int i=0;i<s1.length();i++)
+        {
+            char ch=s1.charAt(i);
+            if(Character.isLetter(ch))
+            {
+                if(s2.contains(String.valueOf(ch)))
+                {
+                    vowCount++;
+                }
+                else
+                {
+                    conCount++;
+                }
+            }
+
+        }
+            System.out.println("vowels:"+vowCount);
+        System.out.println("Consonant:"+conCount);
+
+
+    }
+
+}
+---------------------------------------------------------
+import java.util.*;
+class Main 
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter any string:");
+        String s1=sc.nextLine();
+        String s2[] = s1.trim().split(" ");
+
+        LinkedHashMap<String,Integer> map = new LinkedHashMap<>();
+        for(int i=0;i<s2.length;i++)
+        {
+            String temp=s2[i].toLowerCase();
+            if(map.containsKey(temp))
+            {
+                map.put(temp, map.get(temp)+1);
+            }
+            else
+            {
+                map.put(temp, 1);
+            }
+        } 
+
+        for(String temp : map.keySet())
+        {
+            System.out.println(temp + ":" + map.get(temp));
+        }
+
+
+
+    }
+}
+
+
+---------------------------------------------------------------------------------
+remove duplicate from array
+import java.util.LinkedHashSet;
+
+class Main 
+{
+    public static void main(String[] args) {
+        String s1="programming";
+        StringBuilder sb = new StringBuilder();
+        LinkedHashSet<Character> set = new LinkedHashSet<>();
+        for(char c:s1.toCharArray())
+        {
+            set.add(c);
+        }
+        for(char c :set)
+        {
+            sb.append(c);
+
+        }
+        System.out.println(sb.toString());
+
+    }
+}
+
+//output
+After removing duplicates: progamin
+
+-----------------------------------------------------------------------
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        String s1 = "programming";
+        Set<Character> seen = new HashSet<>();       
+        Set<Character> duplicates = new HashSet<>();
+        for(char c : s1.toCharArray())
+        {
+            if(!seen.add(c))
+            {
+                duplicates.add(c);
+
+            }
+
+        }
+        System.out.println(duplicates);
+    }
+}
+
+print duplicates from string
+-----------------------------------------------------------------------------
+remove duplicate from string
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        String s1 = "programming";
+        Set<Character> set = new LinkedHashSet<>();
+
+        // Add characters to set (duplicates will be ignored)
+        for (char ch : s1.toCharArray()) {
+            set.add(ch);
+        }
+
+        // Build the result string
+        StringBuilder result = new StringBuilder();
+        for (char ch : set) {
+            result.append(ch);
+        }
+
+        System.out.println("After removing duplicates: " + result.toString());
+    }
+}
+---------------------------------------------------------------------------
+Swap two string without using third variable;
+
+public class Main {
+    public static void main(String[] args) {
+        String s1 = "Nikhil";
+        String s2 = "Aman";
+
+        // Step 1: Concatenate both strings and assign to s1
+        s1 = s1 + s2; // s1 = "NikhilAman"
+
+        // Step 2: Extract original s1 from the start of new s1 and assign to s2
+        s2 = s1.substring(0, s1.length() - s2.length()); // s2 = "Nikhil"
+
+        // Step 3: Extract original s2 from the end of new s1 and assign to s1
+        s1 = s1.substring(s2.length()); // s1 = "Aman"
+
+        System.out.println("After swapping:");
+        System.out.println("s1 = " + s1);
+        System.out.println("s2 = " + s2);
+    }
+}
+
+----------------------------------------------------------------------------------------------
+Using third variable 
+public class Main {
+    public static void main(String[] args) {
+        String s1 = "Nikhil";
+        String s2 = "Aman";
+
+        // Use a third variable for swapping
+        String temp = s1;
+        s1 = s2;
+        s2 = temp;
+
+        System.out.println("After swapping:");
+        System.out.println("s1 = " + s1);
+        System.out.println("s2 = " + s2);
+    }
+}
+---------------------------------------------------------------------------------------------
+Convert string into integer without using library function
+public class Main {
+    public static void main(String[] args) {
+        String s = "1234";
+        int result = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            result = result * 10 + (ch - '0');  // Convert char to digit and build number
+        }
+
+        System.out.println("Converted integer: " + result);
+    }
+}
+-----------------------------------------------------------------------------
+
